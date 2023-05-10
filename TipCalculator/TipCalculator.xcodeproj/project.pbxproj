@@ -12,10 +12,21 @@
 		C104F9422A0C23D600FF8469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C104F9412A0C23D600FF8469 /* Assets.xcassets */; };
 		C104F9452A0C23D600FF8469 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C104F9442A0C23D600FF8469 /* Preview Assets.xcassets */; };
 		C104F9522A0C240D00FF8469 /* TipCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C104F9512A0C240D00FF8469 /* TipCalculatorTests.swift */; };
+		C1AB75E92A0C267F00227E05 /* TipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AB75E82A0C267F00227E05 /* TipCalculator.swift */; };
+		C1AB75F12A0C2BDE00227E05 /* TipCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AB75F02A0C2BDE00227E05 /* TipCalculatorUITests.swift */; };
+		C1AB75F32A0C2BDE00227E05 /* TipCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AB75F22A0C2BDE00227E05 /* TipCalculatorUITestsLaunchTests.swift */; };
+		C1AB75FB2A0C5B0E00227E05 /* ContentViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AB75FA2A0C5B0E00227E05 /* ContentViewPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		C104F9532A0C240D00FF8469 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C104F9322A0C23D600FF8469 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C104F9392A0C23D600FF8469;
+			remoteInfo = TipCalculator;
+		};
+		C1AB75F42A0C2BDE00227E05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C104F9322A0C23D600FF8469 /* Project object */;
 			proxyType = 1;
@@ -32,6 +43,11 @@
 		C104F9442A0C23D600FF8469 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C104F94F2A0C240D00FF8469 /* TipCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C104F9512A0C240D00FF8469 /* TipCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorTests.swift; sourceTree = "<group>"; };
+		C1AB75E82A0C267F00227E05 /* TipCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculator.swift; sourceTree = "<group>"; };
+		C1AB75EE2A0C2BDE00227E05 /* TipCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1AB75F02A0C2BDE00227E05 /* TipCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorUITests.swift; sourceTree = "<group>"; };
+		C1AB75F22A0C2BDE00227E05 /* TipCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C1AB75FA2A0C5B0E00227E05 /* ContentViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +65,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C1AB75EB2A0C2BDE00227E05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +81,7 @@
 				C104F9582A0C241700FF8469 /* Source */,
 				C104F93C2A0C23D600FF8469 /* TipCalculator */,
 				C104F9502A0C240D00FF8469 /* TipCalculatorTests */,
+				C1AB75EF2A0C2BDE00227E05 /* TipCalculatorUITests */,
 				C104F93B2A0C23D600FF8469 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +91,7 @@
 			children = (
 				C104F93A2A0C23D600FF8469 /* TipCalculator.app */,
 				C104F94F2A0C240D00FF8469 /* TipCalculatorTests.xctest */,
+				C1AB75EE2A0C2BDE00227E05 /* TipCalculatorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,9 +125,36 @@
 		C104F9582A0C241700FF8469 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C1AB75E72A0C267900227E05 /* Models */,
 				C104F93F2A0C23D600FF8469 /* ContentView.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		C1AB75E72A0C267900227E05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1AB75E82A0C267F00227E05 /* TipCalculator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C1AB75EF2A0C2BDE00227E05 /* TipCalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C1AB75F92A0C5B0100227E05 /* Page Objects */,
+				C1AB75F02A0C2BDE00227E05 /* TipCalculatorUITests.swift */,
+				C1AB75F22A0C2BDE00227E05 /* TipCalculatorUITestsLaunchTests.swift */,
+			);
+			path = TipCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		C1AB75F92A0C5B0100227E05 /* Page Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C1AB75FA2A0C5B0E00227E05 /* ContentViewPage.swift */,
+			);
+			path = "Page Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +195,24 @@
 			productReference = C104F94F2A0C240D00FF8469 /* TipCalculatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C1AB75ED2A0C2BDE00227E05 /* TipCalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1AB75F62A0C2BDE00227E05 /* Build configuration list for PBXNativeTarget "TipCalculatorUITests" */;
+			buildPhases = (
+				C1AB75EA2A0C2BDE00227E05 /* Sources */,
+				C1AB75EB2A0C2BDE00227E05 /* Frameworks */,
+				C1AB75EC2A0C2BDE00227E05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1AB75F52A0C2BDE00227E05 /* PBXTargetDependency */,
+			);
+			name = TipCalculatorUITests;
+			productName = TipCalculatorUITests;
+			productReference = C1AB75EE2A0C2BDE00227E05 /* TipCalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,6 +227,10 @@
 						CreatedOnToolsVersion = 14.3;
 					};
 					C104F94E2A0C240D00FF8469 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = C104F9392A0C23D600FF8469;
+					};
+					C1AB75ED2A0C2BDE00227E05 = {
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = C104F9392A0C23D600FF8469;
 					};
@@ -177,6 +251,7 @@
 			targets = (
 				C104F9392A0C23D600FF8469 /* TipCalculator */,
 				C104F94E2A0C240D00FF8469 /* TipCalculatorTests */,
+				C1AB75ED2A0C2BDE00227E05 /* TipCalculatorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -198,6 +273,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C1AB75EC2A0C2BDE00227E05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -205,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1AB75E92A0C267F00227E05 /* TipCalculator.swift in Sources */,
 				C104F9402A0C23D600FF8469 /* ContentView.swift in Sources */,
 				C104F93E2A0C23D600FF8469 /* TipCalculatorApp.swift in Sources */,
 			);
@@ -218,6 +301,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C1AB75EA2A0C2BDE00227E05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1AB75FB2A0C5B0E00227E05 /* ContentViewPage.swift in Sources */,
+				C1AB75F32A0C2BDE00227E05 /* TipCalculatorUITestsLaunchTests.swift in Sources */,
+				C1AB75F12A0C2BDE00227E05 /* TipCalculatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -225,6 +318,11 @@
 			isa = PBXTargetDependency;
 			target = C104F9392A0C23D600FF8469 /* TipCalculator */;
 			targetProxy = C104F9532A0C240D00FF8469 /* PBXContainerItemProxy */;
+		};
+		C1AB75F52A0C2BDE00227E05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C104F9392A0C23D600FF8469 /* TipCalculator */;
+			targetProxy = C1AB75F42A0C2BDE00227E05 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -437,6 +535,40 @@
 			};
 			name = Release;
 		};
+		C1AB75F72A0C2BDE00227E05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QQ6QSKRB6L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hugosilvag6.TipCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TipCalculator;
+			};
+			name = Debug;
+		};
+		C1AB75F82A0C2BDE00227E05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QQ6QSKRB6L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hugosilvag6.TipCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TipCalculator;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -463,6 +595,15 @@
 			buildConfigurations = (
 				C104F9562A0C240D00FF8469 /* Debug */,
 				C104F9572A0C240D00FF8469 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1AB75F62A0C2BDE00227E05 /* Build configuration list for PBXNativeTarget "TipCalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1AB75F72A0C2BDE00227E05 /* Debug */,
+				C1AB75F82A0C2BDE00227E05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

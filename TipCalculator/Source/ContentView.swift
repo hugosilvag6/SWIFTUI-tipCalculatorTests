@@ -13,46 +13,75 @@ struct ContentView: View {
    @State private var tip: String?
    @State private var message: String = ""
    
+   let tipCalculator = TipCalculator()
+   
    var body: some View {
-       NavigationView {
-           
-           VStack {
+      NavigationView {
+         
+         VStack {
+            
+            TextField("Enter total", text: $total)
+               .textFieldStyle(.roundedBorder)
+               .accessibilityIdentifier("totalTextField")
+            
+            Picker(selection: $tipPercentage) {
+               Text("10%").tag(0.1)
+               Text("20%").tag(0.2)
+               Text("30%").tag(0.3)
+            } label: {
+               EmptyView()
+            }.pickerStyle(.segmented)
+               .accessibilityIdentifier("tipPercentageSegmentedControl")
+            
+            
+            Button {
                
-               TextField("Enter total", text: $total)
-                   .textFieldStyle(.roundedBorder)
+               message = ""
+               tip = ""
                
-               Picker(selection: $tipPercentage) {
-                   Text("10%").tag(0.1)
-                   Text("20%").tag(0.2)
-                   Text("30%").tag(0.3)
-               } label: {
-                   EmptyView()
-               }.pickerStyle(.segmented)
-
+               guard let total = Double(self.total) else {
+                  message = "Invalid input"
+                  return
+               }
                
-               Button("Calculate Tip") {
-                 
-                   
-               }.padding(.top, 20)
+               do {
+                  let result = try tipCalculator.calculate(total: total, tipPercentage: tipPercentage)
+                  let formatter = NumberFormatter()
+                  formatter.numberStyle = .currency
+                  tip = formatter.string(from: NSNumber(value: result))
+               } catch TipCalculatorError.invalidInput {
+                  message = "Invalid input"
+               } catch {
+                  message = error.localizedDescription
+               }
                
-               Text(message)
-                   .padding(.top, 50)
+            } label: {
+               Text("Calculate tip")
+                  .accessibilityIdentifier("calculateTipButton")
+            }
+            .padding(.top, 20)
                
-               Spacer()
-               
-               Text(tip ?? "")
-                   .font(.system(size: 54))
-               
-               Spacer()
+            
+            Text(message)
+               .padding(.top, 50)
+               .accessibilityIdentifier("messageText")
+            
+            Spacer()
+            
+            Text(tip ?? "")
+               .font(.system(size: 54))
+               .accessibilityIdentifier("tipText")
+            
+            Spacer()
                .navigationTitle("Tip Calculator")
-           }.padding()
-           
-       }
+         }.padding()
+         
+      }
    }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+   static var previews: some View {
+      ContentView()
+   }
 }
